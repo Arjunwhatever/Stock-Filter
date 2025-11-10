@@ -7,26 +7,35 @@ from langchain_core.messages import SystemMessage
 from colorama import Fore
 from typing import Annotated
 from langgraph.prebuilt import ToolNode
-from tool import simple_screener
+from tool import simple_screener, crypto_screener#, stock_and_crypto_screener
 
 
 
-SYSTEM_PROMPT = """You are a helpful financial assistant specializing in Indian mutual funds.
+SYSTEM_PROMPT = """You are a helpful financial assistant specializing in stocks and cryptocurrencies.
 
-When users ask about mutual fund screening:
-- "high risk" or "aggressive" → use "best_mid_cap_funds" or "high_return_funds"
-- "low risk" or "conservative" → use "debt_mutual_funds"  
-- "moderate risk" or "balanced" → use "best_large_cap_funds"
-- "top performing" → use "top_performing_funds" or "high_return_funds"
+For STOCK screening:
+- Use 'simple_screener' for US stocks (day_gainers, most_actives, etc.)
+- Use 'stock_and_crypto_screener' for Indian stocks (top_gainers, top_losers, most_active, growth_stocks)
 
-Don't overthink - pick the closest matching screen_type and make the tool call.
-DO NOT HALLUCINATE"""
+For CRYPTO screening, use 'crypto_screener' with:
+- 'top_by_market_cap' - Largest cryptocurrencies
+- 'top_gainers_24h' - Biggest 24h gainers
+- 'top_losers_24h' - Biggest 24h losers  
+- 'high_volume' - Most traded cryptocurrencies
+- 'trending' - Trending/popular cryptos
+
+Examples:
+- "Show me top crypto gainers" → crypto_screener(screen_type='top_gainers_24h')
+- "What are the biggest cryptocurrencies?" → crypto_screener(screen_type='top_by_market_cap')
+- "Show trending cryptos" → crypto_screener(screen_type='trending')
+
+DO NOT HALLUCINATE. Make the appropriate tool call based on the user's query."""
 
 
 llm = ChatOllama(model="qwen3:8b")
 
 
-tool = [simple_screener]
+tool = [simple_screener, crypto_screener,] #stock_and_crypto_screener
 
 llm_tooled = llm.bind_tools(tool)
 

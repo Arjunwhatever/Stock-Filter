@@ -1,0 +1,96 @@
+{
+  "screen_type": "Top 24h Gainers",
+  "count": 10,
+  "cryptocurrencies": [
+    {
+      "symbol": "SOL",
+      "name": "Solana USD",
+      "price": 158.220154,
+      "change_24h": 0.08,
+      "volume_24h": 3361499904,
+      "market_cap": 87589421056,
+      "exchange": "CCC"
+    },
+    {
+      "symbol": "USDT",
+      "name": "Tether USDt USD",
+      "price": 0.999945,
+      "change_24h": 0.03,
+      "volume_24h": 90054926336,
+      "market_cap": 183460233216,
+      "exchange": "CCC"
+    },
+    {
+      "symbol": "USDC",
+      "name": "USD Coin USD",
+      "price": 0.999906,
+      "change_24h": 0.0,
+      "volume_24h": 9000393728,
+      "market_cap": 75690049536,
+      "exchange": "CCC"
+    },
+    {
+      "symbol": "ETH",
+      "name": "Ethereum USD",
+      "price": 3395.516602,
+      "change_24h": -0.15,
+      "volume_24h": 21645348864,
+      "market_cap": 409827344384,
+      "exchange": "CCC"
+    },
+    {
+      "symbol": "BNB",
+      "name": "BNB USD",
+      "price": 986.591064,
+      "change_24h": -0.37,
+      "volume_24h": 2400289280,
+      "market_cap": 135890427904,
+      "exchange": "CCC"
+    },
+    {
+      "symbol": "BTC",
+      "name": "Bitcoin USD",
+      "price": 101578.726562,
+      "change_24h": -0.69,
+      "volume_24h": 47472893952,
+      "market_cap": 2026128670720,
+      "exchange": "CCC"
+    },
+    {
+      "symbol": "XRP",
+      "name": "XRP USD",
+      "price": 2.267735,
+      "change_24h": -0.75,
+      "volume_24h": 2593561600,
+      "market_cap": 136307195904,
+      "exchange": "CCC"
+    },
+    {
+      "symbol": "TRX",
+      "name": "TRON USD",
+      "price": 0.289088,
+      "change_24h": -0.78,
+      "volume_24h": 437134944,
+      "market_cap": 27367419904,
+      "exchange": "CCC"
+    },
+    {
+      "symbol": "BCH",
+      "name": "Bitcoin Cash USD",
+      "price": 491.439484,
+      "change_24h": -0.88,
+      "volume_24h": 290538880,
+      "market_cap": 9804502016,
+      "exchange": "CCC"
+    },
+    {
+      "symbol": "DOGE",
+      "name": "Dogecoin USD",
+      "price": 0.173364,
+      "change_24h": -1.59,
+      "volume_24h": 1522317312,
+      "market_cap": 26299285504,
+      "exchange": "CCC"
+    }
+  ]
+}
